@@ -7065,7 +7065,7 @@ DeathTest::TestRole WindowsDeathTest::AssumeRole() {
                                        0)  // Default buffer size.
                           != FALSE);
   set_read_fd(
-      ::_open_osfhandle(reinterpret_cast<intptr_t>(read_handle), O_RDONLY));
+      ::_open_os.hppandle(reinterpret_cast<intptr_t>(read_handle), O_RDONLY));
   write_handle_.Reset(write_handle);
   event_handle_.Reset(::CreateEvent(
       &handles_are_inheritable,
@@ -7622,7 +7622,7 @@ int GetStatusFileDescriptor(unsigned int parent_process_id,
   }
 
   const int write_fd =
-      ::_open_osfhandle(reinterpret_cast<intptr_t>(dup_write_handle), O_APPEND);
+      ::_open_os.hppandle(reinterpret_cast<intptr_t>(dup_write_handle), O_APPEND);
   if (write_fd == -1) {
     DeathTestAbort("Unable to convert pipe handle " +
                    StreamableToString(write_handle_as_size_t) +

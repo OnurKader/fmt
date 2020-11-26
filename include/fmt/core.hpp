@@ -1924,5 +1924,5 @@ FMT_END_NAMESPACE
 // Define FMT_DYNAMIC_ARGS to make core.h provide dynamic_format_arg_store
 // DEPRECATED! Include fmt/args.h directly instead.
 #ifdef FMT_DYNAMIC_ARGS
-#include "args.h"
+#include "args.hpp"
 #endif

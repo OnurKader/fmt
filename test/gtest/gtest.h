@@ -300,7 +300,7 @@
 #endif  // !_WIN32_WCE
 
 #if defined __APPLE__
-# include <AvailabilityMacros.h>
+# include <AvailabilityMacros.hpp>
 # include <TargetConditionals.h>
 #endif
 

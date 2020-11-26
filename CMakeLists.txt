@@ -103,7 +103,7 @@ endif ()
 message(STATUS "Required features: ${FMT_REQUIRED_FEATURES}")
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
-  set(PEDANTIC_COMPILE_FLAGS -pedantic-errors -Wall -Wextra -pedantic
+	set(PEDANTIC_COMPILE_FLAGS -pedantic-errors -Wall -Wextra -Wpedantic
       -Wold-style-cast -Wundef
       -Wredundant-decls -Wwrite-strings -Wpointer-arith
       -Wcast-qual -Wformat=2 -Wmissing-include-dirs

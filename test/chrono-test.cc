@@ -3,7 +3,7 @@
 // Copyright (c) 2012 - present, Victor Zverovich
 // All rights reserved.
 //
-// For the license information refer to format.h.
+// For the license information refer to format.hpp.
 
 #ifdef WIN32
 #  define _CRT_SECURE_NO_WARNINGS

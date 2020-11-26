@@ -11,7 +11,7 @@
 #include <algorithm>
 #include <vector>
 
-#include "format.h"
+#include "format.hpp"
 
 FMT_BEGIN_NAMESPACE
 namespace detail {

@@ -10,7 +10,7 @@
 
 #include <ostream>
 
-#include "format.h"
+#include "format.hpp"
 
 FMT_BEGIN_NAMESPACE
 

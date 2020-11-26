@@ -3,7 +3,7 @@
 // Copyright (c) 2012 - present, Victor Zverovich
 // All rights reserved.
 //
-// For the license information refer to format.h.
+// For the license information refer to format.hpp.
 
 #include <algorithm>
 #include <climits>
@@ -18,14 +18,14 @@
 #include "gmock.h"
 #include "test-assert.h"
 
-// Check if fmt/core.h compiles with windows.h included before it.
+// Check if fmt/core.hpp compiles with windows.h included before it.
 #ifdef _WIN32
 #  include <windows.h>
 #endif
 
-#include "fmt/args.h"
+#include "fmt/args.hpp"
 #if defined(FMT_COMPILE_TIME_CHECKS) && FMT_COMPILE_TIME_CHECKS
-#  include "fmt/format.h"
+#  include "fmt/format.hpp"
 #endif
 
 #undef min

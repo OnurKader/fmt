@@ -3,13 +3,13 @@
 // Copyright (c) 2019 - present, Victor Zverovich
 // All rights reserved.
 //
-// For the license information refer to format.h.
+// For the license information refer to format.hpp.
 
 #include <array>
 #include <cassert>
 #include <climits>
 
-#include "fmt/format.h"
+#include "fmt/format.hpp"
 
 FMT_BEGIN_NAMESPACE
 template <typename T, typename Char = char> struct scanner {

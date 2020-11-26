@@ -11,7 +11,7 @@
 #include <algorithm>
 #include <cassert>
 #include <variant>
-#include "fmt/format.h"
+#include "fmt/format.hpp"
 
 // This implementation verifies the correctness of the standard API proposed in
 // P0645 Text Formatting and is optimized for copy-pasting from the paper, not
@@ -36,7 +36,7 @@ namespace std {
   template<class charT> class basic_format_parse_context;
   using format_parse_context = basic_format_parse_context<char>;
   using wformat_parse_context = basic_format_parse_context<wchar_t>;
-  
+
   template<class Out, class charT> class basic_format_context;
   using format_context = basic_format_context<
     /* unspecified */ fmt::detail::buffer_appender<char>, char>;
@@ -46,7 +46,7 @@ namespace std {
   template<class T, class charT = char> struct formatter {
     formatter() = delete;
   };
-  
+
   // [format.arguments], arguments
   template<class Context> class basic_format_arg;
 
@@ -93,7 +93,7 @@ namespace std {
       Out out;
       iter_difference_t<Out> size;
     };
-  
+
   template<class Out, class... Args>
     format_to_n_result<Out> format_to_n(Out out, iter_difference_t<Out> n,
                                         string_view fmt, const Args&... args);

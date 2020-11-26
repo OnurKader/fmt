@@ -3,14 +3,14 @@
 // Copyright (c) 2012 - present, Victor Zverovich
 // All rights reserved.
 //
-// For the license information refer to format.h.
+// For the license information refer to format.hpp.
 
-#include "fmt/format.h"
+#include "fmt/format.hpp"
 
 struct test {};
 
-// Test that there is no issues with specializations when fmt/ostream.h is
-// included after fmt/format.h.
+// Test that there is no issues with specializations when fmt/ostream.hpp is
+// included after fmt/format.hpp.
 namespace fmt {
 template <> struct formatter<test> : formatter<int> {
   template <typename FormatContext>
@@ -22,8 +22,8 @@ template <> struct formatter<test> : formatter<int> {
 
 #include <sstream>
 
-#include "fmt/ostream.h"
-#include "fmt/ranges.h"
+#include "fmt/ostream.hpp"
+#include "fmt/ranges.hpp"
 #include "gmock.h"
 #include "gtest-extra.h"
 #include "util.h"
@@ -327,5 +327,5 @@ TEST(OStreamTest, ToString) {
 
 TEST(OStreamTest, Range) {
   auto strs = std::vector<TestString>{TestString("foo"), TestString("bar")};
-  EXPECT_EQ("{foo, bar}", format("{}", strs));
+  EXPECT_EQ("[foo, bar]", format("{}", strs));
 }

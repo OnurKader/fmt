@@ -3,15 +3,15 @@
 // Copyright (c) 2012 - present, Victor Zverovich
 // All rights reserved.
 //
-// For the license information refer to format.h.
+// For the license information refer to format.hpp.
 
-#include "fmt/printf.h"
+#include "fmt/printf.hpp"
 
 #include <cctype>
 #include <climits>
 #include <cstring>
 
-#include "fmt/core.h"
+#include "fmt/core.hpp"
 #include "gtest-extra.h"
 #include "util.h"
 

@@ -3,7 +3,7 @@
 // Copyright (c) 2012 - present, Victor Zverovich
 // All rights reserved.
 //
-// For the license information refer to format.h.
+// For the license information refer to format.hpp.
 
 #include <stdint.h>
 
@@ -16,15 +16,15 @@
 #include <memory>
 #include <string>
 
-// Check if fmt/format.h compiles with windows.h included before it.
+// Check if fmt/format.hpp compiles with windows.h included before it.
 #ifdef _WIN32
 #  include <windows.h>
 #endif
 
-// Check if fmt/format.h compiles with the X11 index macro defined.
+// Check if fmt/format.hpp compiles with the X11 index macro defined.
 #define index(x, y) no nice things
 
-#include "fmt/format.h"
+#include "fmt/format.hpp"
 
 #undef index
 

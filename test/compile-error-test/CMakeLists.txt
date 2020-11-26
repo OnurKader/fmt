@@ -11,7 +11,7 @@ set(CMAKE_REQUIRED_FLAGS ${CXX_STANDARD_FLAG} ${PEDANTIC_COMPILE_FLAGS})
 function (generate_source result fragment)
   set(${result} "
   #define FMT_HEADER_ONLY 1
-  #include \"fmt/format.h\"
+  #include \"fmt/format.hpp\"
   int main() {
     ${fragment}
   }

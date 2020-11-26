@@ -3,17 +3,17 @@
 // Copyright (c) 2012 - present, Victor Zverovich
 // All rights reserved.
 //
-// For the license information refer to format.h.
+// For the license information refer to format.hpp.
 
 #include <string>
 #include <type_traits>
 
-// Check that fmt/compile.h compiles with windows.h included before it.
+// Check that fmt/compile.hpp compiles with windows.h included before it.
 #ifdef _WIN32
 #  include <windows.h>
 #endif
 
-#include "fmt/compile.h"
+#include "fmt/compile.hpp"
 #include "gmock.h"
 #include "gtest-extra.h"
 #include "util.h"

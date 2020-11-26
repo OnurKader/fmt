@@ -3,12 +3,12 @@
 // Copyright (c) 2012 - present, Victor Zverovich
 // All rights reserved.
 //
-// For the license information refer to format.h.
+// For the license information refer to format.hpp.
 
 #ifndef FMT_MOCK_ALLOCATOR_H_
 #define FMT_MOCK_ALLOCATOR_H_
 
-#include "fmt/format.h"
+#include "fmt/format.hpp"
 #include "gmock.h"
 
 template <typename T> class mock_allocator {

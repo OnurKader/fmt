@@ -3,18 +3,18 @@
 // Copyright (c) 2012 - present, Victor Zverovich
 // All rights reserved.
 //
-// For the license information refer to format.h.
+// For the license information refer to format.hpp.
 
 #define FMT_NOEXCEPT
 #undef FMT_SHARED
 #include "test-assert.h"
 
-// Include format.cc instead of format.h to test implementation.
+// Include format.cc instead of format.hpp to test implementation.
 #include <algorithm>
 #include <cstring>
 
 #include "../src/format.cc"
-#include "fmt/printf.h"
+#include "fmt/printf.hpp"
 #include "gmock.h"
 #include "gtest-extra.h"
 #include "util.h"

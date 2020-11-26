@@ -1,2 +1,2 @@
-#include "os.h"
-#warning "fmt/posix.h is deprecated; use fmt/os.h instead"
+#include "os.hpp"
+#warning "fmt/posix.hpp is deprecated; use fmt/os.hpp instead"

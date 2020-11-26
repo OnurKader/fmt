@@ -7,9 +7,9 @@
 // Copyright (c) 2012 - present, Victor Zverovich
 // All rights reserved.
 //
-// For the license information refer to format.h.
+// For the license information refer to format.hpp.
 
-#include "fmt/core.h"
+#include "fmt/core.hpp"
 #include "gtest.h"
 
 TEST(AssertTest, Fail) {

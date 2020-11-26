@@ -26,7 +26,7 @@
 #  include <io.h>  // _isatty
 #endif
 
-#include "format.h"
+#include "format.hpp"
 
 // Dummy implementations of strerror_r and strerror_s called if corresponding
 // system functions are not available.

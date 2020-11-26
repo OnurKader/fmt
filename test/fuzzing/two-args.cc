@@ -1,10 +1,10 @@
 // Copyright (c) 2019, Paul Dreik
-// For the license information refer to format.h.
+// For the license information refer to format.hpp.
 
 #include <cstdint>
 #include <exception>
 #include <string>
-#include <fmt/format.h>
+#include <fmt/format.hpp>
 
 #include "fuzzer-common.h"
 

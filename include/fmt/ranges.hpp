@@ -15,7 +15,7 @@
 #include <initializer_list>
 #include <type_traits>
 
-#include "format.h"
+#include "format.hpp"
 
 // output only up to N items from the range.
 #ifndef FMT_RANGE_OUTPUT_LENGTH_LIMIT
@@ -36,9 +36,9 @@ struct formatting_range : formatting_base<Char> {
   static FMT_CONSTEXPR_DECL const size_t range_length_limit =
       FMT_RANGE_OUTPUT_LENGTH_LIMIT;  // output only up to N items from the
                                       // range.
-  Char prefix = '{';
+  Char prefix = '[';
   Char delimiter = ',';
-  Char postfix = '}';
+  Char postfix = ']';
   static FMT_CONSTEXPR_DECL const bool add_delimiter_spaces = true;
   static FMT_CONSTEXPR_DECL const bool add_prepostfix_space = false;
 };

@@ -1,5 +1,5 @@
 // Copyright (c) 2019, Paul Dreik
-// For the license information refer to format.h.
+// For the license information refer to format.hpp.
 
 #ifndef FUZZER_COMMON_H
 #define FUZZER_COMMON_H
@@ -8,7 +8,7 @@
 #include <cstring>      // memcpy
 #include <vector>
 
-#include <fmt/core.h>
+#include <fmt/core.hpp>
 
 // One can format to either a string, or a buffer. The latter is faster, but
 // one may be interested in formatting to a string instead to verify it works

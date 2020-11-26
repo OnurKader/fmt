@@ -14,8 +14,8 @@
 #include <locale>
 #include <sstream>
 
-#include "format.h"
-#include "locale.h"
+#include "format.hpp"
+#include "locale.hpp"
 
 FMT_BEGIN_NAMESPACE
 

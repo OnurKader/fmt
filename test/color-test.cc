@@ -3,9 +3,9 @@
 // Copyright (c) 2012 - present, Victor Zverovich
 // All rights reserved.
 //
-// For the license information refer to format.h.
+// For the license information refer to format.hpp.
 
-#include "fmt/color.h"
+#include "fmt/color.hpp"
 
 #include <iterator>
 #include <string>

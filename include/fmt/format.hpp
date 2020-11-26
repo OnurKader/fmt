@@ -41,7 +41,7 @@
 #include <stdexcept>
 #include <utility>  // std::swap
 
-#include "core.h"
+#include "core.hpp"
 
 #ifdef __INTEL_COMPILER
 #  define FMT_ICC_VERSION __INTEL_COMPILER
@@ -3998,7 +3998,7 @@ FMT_END_NAMESPACE
 
 #ifdef FMT_HEADER_ONLY
 #  define FMT_FUNC inline
-#  include "format-inl.h"
+#  include "format-inl.hpp"
 #else
 #  define FMT_FUNC
 #endif

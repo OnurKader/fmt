@@ -3,13 +3,13 @@
 // Copyright (c) 2012 - present, Victor Zverovich
 // All rights reserved.
 //
-// For the license information refer to format.h.
+// For the license information refer to format.hpp.
 //
 // Copyright (c) 2018 - present, Remotion (Igor Schulz)
 // All Rights Reserved
 // {fmt} support for ranges, containers and types tuple interface.
 
-#include "fmt/ranges.h"
+#include "fmt/ranges.hpp"
 
 #include "gtest.h"
 
@@ -25,30 +25,30 @@
 TEST(RangesTest, FormatArray) {
   int32_t ia[] = {1, 2, 3, 5, 7, 11};
   auto iaf = fmt::format("{}", ia);
-  EXPECT_EQ("{1, 2, 3, 5, 7, 11}", iaf);
+  EXPECT_EQ("[1, 2, 3, 5, 7, 11]", iaf);
 }
 
 TEST(RangesTest, Format2dArray) {
   int32_t ia[][2] = {{1, 2}, {3, 5}, {7, 11}};
   auto iaf = fmt::format("{}", ia);
-  EXPECT_EQ("{{1, 2}, {3, 5}, {7, 11}}", iaf);
+  EXPECT_EQ("[[1, 2], [3, 5], [7, 11]]", iaf);
 }
 
 TEST(RangesTest, FormatVector) {
   std::vector<int32_t> iv{1, 2, 3, 5, 7, 11};
   auto ivf = fmt::format("{}", iv);
-  EXPECT_EQ("{1, 2, 3, 5, 7, 11}", ivf);
+  EXPECT_EQ("[1, 2, 3, 5, 7, 11]", ivf);
 }
 
 TEST(RangesTest, FormatVector2) {
   std::vector<std::vector<int32_t>> ivv{{1, 2}, {3, 5}, {7, 11}};
   auto ivf = fmt::format("{}", ivv);
-  EXPECT_EQ("{{1, 2}, {3, 5}, {7, 11}}", ivf);
+  EXPECT_EQ("[[1, 2], [3, 5], [7, 11]]", ivf);
 }
 
 TEST(RangesTest, FormatMap) {
   std::map<std::string, int32_t> simap{{"one", 1}, {"two", 2}};
-  EXPECT_EQ("{(\"one\", 1), (\"two\", 2)}", fmt::format("{}", simap));
+  EXPECT_EQ("[(\"one\", 1), (\"two\", 2)]", fmt::format("{}", simap));
 }
 
 TEST(RangesTest, FormatPair) {
@@ -122,7 +122,7 @@ TEST(RangesTest, FormatTo) {
   char buf[10];
   auto end = fmt::format_to(buf, "{}", std::vector{1, 2, 3});
   *end = '\0';
-  EXPECT_STREQ(buf, "{1, 2, 3}");
+  EXPECT_STREQ(buf, "[1, 2, 3]");
 }
 
 struct path_like {
@@ -165,7 +165,7 @@ struct zstring {
 
 TEST(RangesTest, JoinSentinel) {
   zstring hello{"hello"};
-  EXPECT_EQ("{'h', 'e', 'l', 'l', 'o'}", fmt::format("{}", hello));
+  EXPECT_EQ("['h', 'e', 'l', 'l', 'o']", fmt::format("{}", hello));
   EXPECT_EQ("h_e_l_l_o", fmt::format("{}", fmt::join(hello, "_")));
 }
 
@@ -230,19 +230,19 @@ TEST(RangesTest, JoinRange) {
 
 TEST(RangesTest, Range) {
   noncopyable_range<int> w(3u, 0);
-  EXPECT_EQ("{0, 0, 0}", fmt::format("{}", w));
-  EXPECT_EQ("{0, 0, 0}", fmt::format("{}", noncopyable_range<int>(3u, 0)));
+  EXPECT_EQ("[0, 0, 0]", fmt::format("{}", w));
+  EXPECT_EQ("[0, 0, 0]", fmt::format("{}", noncopyable_range<int>(3u, 0)));
 
   non_const_only_range<int> x(3u, 0);
-  EXPECT_EQ("{0, 0, 0}", fmt::format("{}", x));
-  EXPECT_EQ("{0, 0, 0}", fmt::format("{}", non_const_only_range<int>(3u, 0)));
+  EXPECT_EQ("[0, 0, 0]", fmt::format("{}", x));
+  EXPECT_EQ("[0, 0, 0]", fmt::format("{}", non_const_only_range<int>(3u, 0)));
 
   std::vector<int> y(3u, 0);
-  EXPECT_EQ("{0, 0, 0}", fmt::format("{}", y));
-  EXPECT_EQ("{0, 0, 0}", fmt::format("{}", std::vector<int>(3u, 0)));
+  EXPECT_EQ("[0, 0, 0]", fmt::format("{}", y));
+  EXPECT_EQ("[0, 0, 0]", fmt::format("{}", std::vector<int>(3u, 0)));
 
   const std::vector<int> z(3u, 0);
-  EXPECT_EQ("{0, 0, 0}", fmt::format("{}", z));
+  EXPECT_EQ("[0, 0, 0]", fmt::format("{}", z));
 }
 
 #if !FMT_MSC_VER || FMT_MSC_VER >= 1927

@@ -3,14 +3,14 @@
 // Copyright (c) 2012 - present, Victor Zverovich
 // All rights reserved.
 //
-// For the license information refer to format.h.
+// For the license information refer to format.hpp.
 
 #ifndef FMT_GTEST_EXTRA_H_
 #define FMT_GTEST_EXTRA_H_
 
 #include <string>
 
-#include "fmt/os.h"
+#include "fmt/os.hpp"
 #include "gmock.h"
 
 #define FMT_TEST_THROW_(statement, expected_exception, expected_message, fail) \

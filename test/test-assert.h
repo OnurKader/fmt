@@ -3,7 +3,7 @@
 // Copyright (c) 2012 - present, Victor Zverovich
 // All rights reserved.
 //
-// For the license information refer to format.h.
+// For the license information refer to format.hpp.
 
 #ifndef FMT_TEST_ASSERT_H_
 #define FMT_TEST_ASSERT_H_

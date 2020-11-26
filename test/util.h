@@ -3,13 +3,13 @@
 // Copyright (c) 2012 - present, Victor Zverovich
 // All rights reserved.
 //
-// For the license information refer to format.h.
+// For the license information refer to format.hpp.
 
 #include <cstdarg>
 #include <cstdio>
 #include <string>
 
-#include "fmt/os.h"
+#include "fmt/os.hpp"
 
 enum { BUFFER_SIZE = 256 };
 
