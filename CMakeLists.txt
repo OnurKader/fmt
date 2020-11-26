@@ -68,10 +68,10 @@ option(FMT_FUZZ "Generate the fuzz target." OFF)
 option(FMT_CUDA_TEST "Generate the cuda-test target." OFF)
 option(FMT_OS "Include core requiring OS (Windows/Posix) " ON)
 
-# Get version from core.h
-file(READ include/fmt/core.h core_h)
-if (NOT core_h MATCHES "FMT_VERSION ([0-9]+)([0-9][0-9])([0-9][0-9])")
-  message(FATAL_ERROR "Cannot get FMT_VERSION from core.h.")
+# Get version from core.hpp
+file(READ include/fmt/core.hpp core.hpp)
+if (NOT core.hpp MATCHES "FMT_VERSION ([0-9]+)([0-9][0-9])([0-9][0-9])")
+  message(FATAL_ERROR "Cannot get FMT_VERSION from core.hpp.")
 endif ()
 # Use math to skip leading zeros if any.
 math(EXPR CPACK_PACKAGE_VERSION_MAJOR ${CMAKE_MATCH_1})
@@ -164,7 +164,7 @@ endif ()
 
 set(strtod_l_headers stdlib.h)
 if (APPLE)
-  set(strtod_l_headers ${strtod_l_headers} xlocale.h)
+  set(strtod_l_headers ${strtod_l_headers} xlocale.hpp)
 endif ()
 
 include(CheckSymbolExists)
@@ -183,8 +183,8 @@ function(add_headers VAR)
 endfunction()
 
 # Define the fmt library, its includes and the needed defines.
-add_headers(FMT_HEADERS chrono.h color.h compile.h core.h format.h format-inl.h
-                        locale.h os.h ostream.h posix.h printf.h ranges.h)
+add_headers(FMT_HEADERS chrono.hpp color.hpp compile.hpp core.hpp format.hpp format-inl.hpp
+                        locale.hpp os.hpp ostream.hpp posix.hpp printf.hpp ranges.hpp)
 if (FMT_OS)
   set(FMT_SOURCES src/format.cc src/os.cc)
 else()
